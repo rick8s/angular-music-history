@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- always place the bootstrap stylesheet link BEFORE my stylesheet as shown below-->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rick's Music History</title>
+    <meta charset="utf-8">
+   
+  </head>
+
+  <body> 
+    <div class="container-fluid">
+    <!--  this is the navigation bar -->
+    <div class="row">
+      <div class="col-sm-10, col-md-12">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#">Music History</a></li>
+          <li><a href="#">View Music</a></li>
+          <li><a href="addMusic">Add Music</a></li>
+          <li><a href="#">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-3, col-md-3">
+        <br>  
+        <br>
+        <br>
+        <!-- Artist filter button -->       
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filter by Artist <span class="caret"></span>
+          </button>
+          <ul id="pickArtist" class="dropdown-menu">
+            <!--  This area populates dropdown to select an artist -->          
+          </ul>
+        </div>
+        <br>
+        <br>
+        <!-- Album filter button -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Filter by Album <span class="caret"></span>
+          </button>
+          <ul id="pickAlbum" class="dropdown-menu">
+              <!-- This area populates dropdown to select an album -->
+          </ul>
+        </div>
+            
+  <!-- Look at placing in bootstrap columns rather than table so that they will collapse -->
+        <br>
+        <br>
+        <div>
+          <button id="resetBtn" type="button" class="btn btn-default"  onClick="window.location.reload()">Reset</button>
+        </div>
+      </div>        
+      <div class="col-md-8">
+        <div id="newSongs" class="songs">
+
+              <!-- This is the area that will be populated with songs -->
+
+        </div>
+        <!-- <div class="more">
+        <button id="more">More Songs</button>
+        </div> -->
+      </div>
+    </div>
+   
+    <script data-main="javascripts/main" src="bower_components/requirejs/require.js"></script> 
+  </body>
+</html>
+
+
+      
+
+

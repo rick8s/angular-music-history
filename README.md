@@ -1,2 +1,1 @@
-# angular-music-history
-Update using angular
+# bootstrap-music-history
